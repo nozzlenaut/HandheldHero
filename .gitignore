@@ -14,7 +14,7 @@ build/
 dist/
 *.spec
 
-# RetroCommander runtime/cache files
+# HandheldHero runtime/cache files
 source_versions.json
 Downloads/
 Backups/
