@@ -1,0 +1,31 @@
+# Python stuff I do not need in the repo
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# PyInstaller output
+build/
+dist/
+*.spec
+
+# RetroCommander runtime/cache files
+source_versions.json
+Downloads/
+Backups/
+
+# Editor / OS clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local test junk
+*.log
+*.tmp
