@@ -1,0 +1,21 @@
+name: Python syntax check
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  compile:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile source
+        run: python -m py_compile handheld_hero.py
