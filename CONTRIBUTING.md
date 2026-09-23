@@ -1,10 +1,10 @@
-# Contributing to RetroCommander
+# Contributing to HandheldHero
 
-RetroCommander is supposed to make handheld setup less annoying. The code should follow the same rule.
+HandheldHero is supposed to make handheld setup less annoying. The code should follow the same rule.
 
-If you open a file and need to stare at it for ten minutes before you can tell what it is doing, the code is not done yet.
+If I open a file six months from now and need to stare at it for ten minutes before I can tell what it is doing, the code is not done yet.
 
-## Keep the code readable
+## Keep it readable
 
 A few rules I want to keep around this project:
 
@@ -18,7 +18,7 @@ A few rules I want to keep around this project:
 
 ## Comment style
 
-Comments in RetroCommander should sound like a person explaining the code to another person.
+Comments should sound like a person explaining the code to another person.
 
 Good:
 
@@ -51,7 +51,7 @@ Nobody talks like that.
 
 ## External downloads
 
-If RetroCommander downloads something automatically, it should come from a source we can identify and explain.
+If HandheldHero downloads something automatically, it should come from a source we can identify and explain.
 
 For normal Android apps, Obtainium should handle updates whenever it already does the job well.
 
@@ -61,9 +61,9 @@ Do not add mystery mirrors because they make one install path slightly easier.
 
 ## Files supplied by the user
 
-RetroCommander can work with user-provided BIOS files, firmware, and local packages.
+HandheldHero can work with user-provided BIOS files, firmware, and local packages.
 
-The tool should not quietly download copyrighted or questionable files just because a filename is missing.
+The tool should not quietly download copyrighted/questionable files just because a filename is missing.
 
 Local selections should be obvious in the UI and validated before anything gets copied.
 
@@ -74,14 +74,14 @@ Anything that can overwrite existing files deserves extra care.
 - Back up overwritten files when practical.
 - Merge known package layouts instead of deleting whole folders.
 - Reject suspicious archive paths like `../whatever`.
-- Use Dry Run when adding a new operation so people can see what is about to happen.
+- Keep Dry Run honest when adding a new operation.
 - Verify the result after writing it.
 
-Basically: do not make the one-click button exciting.
+Basically: **do not make the one-click button exciting.**
 
 ## Version handling
 
-Show the version users are actually getting whenever the upstream project exposes one.
+Show the version users are actually getting whenever upstream exposes one.
 
 If the project uses a rolling release, date, build number, or other weird scheme, show that honestly.
 
@@ -95,6 +95,6 @@ At minimum:
 2. Test download/source resolution for anything you changed.
 3. Use a temporary/fake SD root for Switch filesystem changes before trying a real card.
 4. Make sure Dry Run agrees with what Run Setup actually does.
-5. Make sure you did not leave build folders, downloaded APKs, caches, or personal paths in the commit.
+5. Make sure build folders, downloaded APKs, caches, backups, or personal paths did not sneak into the commit.
 
 If the change touches real hardware, test like you would prefer not to spend the rest of the evening fixing it.
